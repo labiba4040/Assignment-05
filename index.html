@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation</title>
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+      .font-lexend{
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
     
     <!-- daisyUI   -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -14,15 +24,41 @@
             extend: {
               colors: {
                 clifford: '#da373d',
+                nav_bg: '#F9F7F3',
+                bcolor: '#B4F461',
+                
               }
             }
           }
         }
       </script>
 </head>
-<body>
+<body class="font-lexend">
+  <header>
+    <nav class="bg-nav_bg">
+      <div class="container mx-auto">
+        <div class="navbar ">
+          <div class="navbar-start">
+            <button class="btn bg-bcolor font-semibold text-xl">Blog</button>
+          </div>
+          <div class="navbar-center gap-2">
+            <img src="./assets/logo.png" alt="">
+            <p class="hidden lg:block lg:font-semibold text-xl">Donate Bangladesh</p>
+          </div>
+          <div class="navbar-end gap-2">
+            <img src="./assets/coin.png" alt="">
+            <p class="lg:font-medium text-xl">5500 BDT</p>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+  </header>
     <main>
         
     </main>
+    <footer></footer>
 </body>
 </html>
