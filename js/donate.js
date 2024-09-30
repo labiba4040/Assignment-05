@@ -20,6 +20,27 @@ const afterDonate = donateValue + firstAmountValue
 
 document.getElementById('first-donate').innerText = afterDonate
 
+const donationPurpose1 = document.getElementById('title-1').innerText;
+const donationCard = document.createElement('div');
+
+donationCard.classList.add('card', 'bg-base-100', 'p-4', 'mt-4', 'border', 'border-card_section_border');
+
+const p = document.createElement('p');
+p.style.fontWeight = 'bold';
+
+
+p.innerText = `${firstAmountValue} Taka is Donated for ${donationPurpose1}`;
+
+const date = document.createElement('p');
+
+date.classList.add('text-base', 'text-gray-500', 'font-light');
+date.innerText = `Date: ${new Date()}`;
+
+donationCard.appendChild(p);
+donationCard.appendChild(date);
+
+document.getElementById('payment-container').appendChild(donationCard);
+
 const modal = document.getElementById('my_modal_5');
 if (modal) {
     modal.showModal();
@@ -49,6 +70,28 @@ document.getElementById('second-btn').addEventListener('click', function(event){
     const afterDonate = donateValue + secondAmountValue
     
     document.getElementById('second-donate').innerText = afterDonate
+
+
+    const donationPurpose1 = document.getElementById('title-2').innerText;
+const donationCard = document.createElement('div');
+
+donationCard.classList.add('card', 'bg-base-100', 'p-4', 'mt-4', 'border', 'border-card_section_border');
+
+const p = document.createElement('p');
+p.style.fontWeight = 'bold';
+
+
+p.innerText = `${secondAmountValue} Taka is Donated for ${donationPurpose1}`;
+
+const date = document.createElement('p');
+
+date.classList.add('text-base', 'text-gray-500', 'font-light');
+date.innerText = `Date: ${new Date()}`;
+
+donationCard.appendChild(p);
+donationCard.appendChild(date);
+
+document.getElementById('payment-container').appendChild(donationCard);
     
     
     
@@ -79,6 +122,28 @@ if (modal) {
         const afterDonate = donateValue + thirdAmountValue
         
         document.getElementById('third-donate').innerText = afterDonate
+
+
+        const donationPurpose1 = document.getElementById('title-3').innerText;
+const donationCard = document.createElement('div');
+
+donationCard.classList.add('card', 'bg-base-100', 'p-4', 'mt-4', 'border', 'border-card_section_border');
+
+const p = document.createElement('p');
+p.style.fontWeight = 'bold';
+
+
+p.innerText = `${thirdAmountValue} Taka is Donated for ${donationPurpose1}`;
+
+const date = document.createElement('p');
+
+date.classList.add('text-base', 'text-gray-500', 'font-light');
+date.innerText = `Date: ${new Date()}`;
+
+donationCard.appendChild(p);
+donationCard.appendChild(date);
+
+document.getElementById('payment-container').appendChild(donationCard);
         
         
         const modal = document.getElementById('my_modal_5');

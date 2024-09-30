@@ -55,16 +55,17 @@
       </div>
     </nav>
     <div class="flex justify-center items-center  gap-3 my-8 ">
-      <button class="btn bg-bcolor p-2 text-lg font-bold lg:w-[130px] text-center">Donation</button>
-      <button class="btn bg-white p-2 text-lg font-bold lg:w-[130px] text-center">History</button>
+      <button onclick="toggleBtn(this)" id="donation" class="btn bg-bcolor p-2 text-lg font-bold lg:w-[130px] text-center">Donation</button>
+      <button onclick="toggleBtn(this)" id="history" class="btn bg-white p-2 text-lg font-bold lg:w-[130px] text-center">History</button>
     </div>
     
     
   </header>
     <main class="container mx-auto">
-
+    <div id="donation-section">
+      
       <section class="px-10 flex flex-col lg:flex-row">
-        <div class="card lg:card-side bg-base-100 lg:p-10  border-2 ">
+        <div id="card-1" class="card lg:card-side bg-base-100 lg:p-10  border-2 ">
           <figure class="lg:w-2/4 p-4 lg:p-0">
             <img class="rounded-lg "
               src="./assets/noakhali.png"
@@ -82,7 +83,7 @@
               
               
             </div>
-            <h2 class="card-title my-4">Donate for Flood at Noakhali, Bangladesh</h2>
+            <h2 id="title-1" class="card-title my-4">Donate for Flood at Noakhali, Bangladesh</h2>
             <p class="my-4 text-medium font-light gap-1"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
              <input id="first-amount" class="border-2 rounded-lg text-sm font-light p-3" type="number" placeholder="Write Donation Amount">
            
@@ -97,7 +98,7 @@
 
 
       <section class="px-10 py-5 flex flex-col lg:flex-row">
-        <div class="card lg:card-side bg-base-100 lg:p-10  border-2 ">
+        <div id="card-2" class="card lg:card-side bg-base-100 lg:p-10  border-2 ">
           <figure class="lg:w-2/4 p-4 lg:p-0">
             <img class="rounded-lg "
               src="./assets/feni.png"
@@ -113,7 +114,7 @@
               </p>
               
             </div>
-            <h2 class="card-title my-4">Donate for Flood Relief in Feni,Bangladesh</h2>
+            <h2 id="title-2" class="card-title my-4">Donate for Flood Relief in Feni,Bangladesh</h2>
             <p class="my-4 text-medium font-light gap-1">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
              <input id="second-amount" class="border-2 rounded-lg text-sm font-light p-3" type="number" placeholder="Write Donation Amount">
            
@@ -125,7 +126,7 @@
       </section>
       
       <section class="px-10 flex flex-col lg:flex-row py-5">
-        <div class="card lg:card-side bg-base-100  lg:p-10  border-2 ">
+        <div id="card-3" class="card lg:card-side bg-base-100  lg:p-10  border-2 ">
           <figure class="lg:w-2/4 p-4 lg:p-0">
             <img class="rounded-lg "
               src="./assets/quota-protest.png"
@@ -141,7 +142,7 @@
               </p>
               
             </div>
-            <h2 class="card-title my-4">Aid for Injured in the Quota Movement</h2>
+            <h2 id="title-3" class="card-title my-4">Aid for Injured in the Quota Movement</h2>
             <p class="my-4 text-medium font-light gap-1">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
              <input id="third-amount" class="border-2 rounded-lg text-sm font-light p-3" type="number" placeholder="Write Donation Amount">
            
@@ -152,27 +153,45 @@
         </div>
       </section>
 
-     
-<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle h-full">
-  <div class="modal-box flex flex-col justify-center items-center gap-2 ">
+
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle h-full">
+        <div class="modal-box flex flex-col justify-center items-center gap-2 ">
+          
+            <h3 class="text-3xl font-semibold">Congrates!</h3>
+            
+              <img  src="./assets/coin.png" alt="">
+            
+          
+          <p class=" py-3 font-normal text-[#111111B3]">You Have Donated for Mankind</p>
+          <h3 class="text-lg font-semibold">Successfully</h3>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close Confirmation</button>
+            </form>
+          
+          </div>
+          
+        </div>
+      </dialog>
     
-      <h3 class="text-3xl font-semibold">Congrates!</h3>
-      
-        <img  src="./assets/coin.png" alt="">
-      
-    
-    <p class=" py-3 font-normal text-[#111111B3]">You Have Donated for Mankind</p>
-    <h3 class="text-lg font-semibold">Successfully</h3>
-    <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close Confirmation</button>
-      </form>
     
     </div>
-    
+     
+
+     
+
+
+
+<div id="payment-section" class="container mx-auto hidden">
+
+  <div class="card lg:card-side bg-base-100  ">
+    <div id="payment-container" class="card-body ">
+     
+    </div>
   </div>
-</dialog>
+
+</div>
       
 
       
